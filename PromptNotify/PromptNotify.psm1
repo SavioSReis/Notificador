@@ -1,3 +1,3 @@
-$Public = @( Get-ChildItem -Path $PSScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue )
-
-$Public | ForEach-Object { . $_.FullName }
+Get-ChildItem -Path "$PSScriptRoot\Public" -Filter *.ps1 | ForEach-Object {
+    . $_.FullName
+}
