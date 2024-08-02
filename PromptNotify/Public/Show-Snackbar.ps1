@@ -12,5 +12,6 @@ function Show-Snackbar {
         $Notificacao.Icon = [System.Drawing.SystemIcons]::Information
         $Notificacao.Visible = $true
         $Notificacao.ShowBalloonTip(10000)
+        $Notificacao.Dispose()
     }
 }
